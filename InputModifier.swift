@@ -71,6 +71,7 @@ private struct KeyboardNotification {
         let height: CGFloat = {
             switch notification.name {
                 case UIWindow.keyboardWillShowNotification: return endFrame.height
+                case UIWindow.keyboardWillChangeFrameNotification: return endFrame.height
                 default: return 0
             }
         }()
